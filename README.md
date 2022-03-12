@@ -1,1 +1,1 @@
-# goit-nodejs-hw-13-image-finder
+# goit-nodejs-hw-1
