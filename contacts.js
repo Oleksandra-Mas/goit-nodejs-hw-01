@@ -14,7 +14,7 @@ const contactsPath = path.join(__dirname, "db/contacts.json");
       const contacts = await listContacts();
       const contact = contacts.find(({id})=>id===contactId);
       if (!contact) {
-          throw new Error(`Contact with ${contactId} not found`);
+          throw new Error(`Contact with id=${contactId} not found`);
       }
       return contact;
   }
@@ -23,7 +23,7 @@ const contactsPath = path.join(__dirname, "db/contacts.json");
     const contacts = await listContacts();
     const contactIdx = contacts.findIndex(({id})=>id===contactId);
     if (contactIdx===-1) {
-        throw new Error(`Contact with ${contactId} not found`);
+        throw new Error(`Contact with id=${contactId} not found`);
     }
     const [removedContact] = contacts.splice(contactIdx, 1)
     await fs.writeFile(contactsPath, JSON.stringify(contacts));
