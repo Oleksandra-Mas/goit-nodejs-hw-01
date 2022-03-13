@@ -1,4 +1,4 @@
-# goit-nodejs-hw-1
+# goit-nodejs-hw-01
 
 list: https://gyazo.com/c95eeca82f25ce45c674a45a15ccf6c4
 
