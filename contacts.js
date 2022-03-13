@@ -25,8 +25,7 @@ const contactsPath = path.join(__dirname, "db/contacts.json");
     if (contactIdx===-1) {
         throw new Error(`Contact with ${contactId} not found`);
     }
-      const removedContact = contacts[contactIdx];
-    contacts.splice(contactIdx, 1);
+    const [removedContact] = contacts.splice(contactIdx, 1)
     await fs.writeFile(contactsPath, JSON.stringify(contacts));
     return removedContact;
   }
